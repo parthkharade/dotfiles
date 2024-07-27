@@ -144,16 +144,19 @@ if is_docker; then
 else
     PS1='\w\[\e[38;5;214m\]${PS1_CMD1}\n\[\e[93m\]>\[\e[0m\] '
 fi
+
+
+
+# Add nvim executable to the path
 export PATH=$PATH:"$HOME"/.local/bin:/opt/nvim-linux64/bin	
+
 eval "$(zoxide init bash)"
+
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
-# if [ -f $HOME/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh ]; then
-#     $HOME/.local/bin/powerline-daemon -q
-#     POWERLINE_BASH_CONTINUATION=1
-#     POWERLINE_BASH_SELECT=1
-#     source $HOME/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
-# fi
+
+
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
