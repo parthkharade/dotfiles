@@ -1,27 +1,35 @@
 #!/bin/bash
 
 # Script to install nvim, tmux, zoxide and fzf add more stuff if needed.
+#
+# TODOOOOO
+# Install NodeJS for COC and rip grep, remove rip grep installattion file after installing for telescope live grep. 
+# Install GCC and clangd and Python LSP server?
 
-check_status(){
-  if[ $? -ne 0 ]; then
-    echo "$1 failed"
-  fi
-}
+echo "Installing RipGrep ....."
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+sudo rm -f ripgrep_14.1.0-1_amd64.deb
+
+echo "Installing NodeJS ....."
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
 
 echo "Installing Neovim ....."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz &&
 sudo rm -rf /opt/nvim &&
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
-check_status "Neovim Installation"
-
+rm -f nvim-linux64.tar.gz
 # export PATH="$PATH:/opt/nvim-linux64/bin" -----> Add this to your bashrc if not present. <AUTOMATE THIS?>
 
+echo "Installing tmux ....."
 sudo apt-get install tmux
-check_status "tmux Installation"
 
 #
+echo "Installing zoxide ....."
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-check_status "zoxide installation"
-
+zoxide init bash
 
 # eval "$(zoxide init bash)" add this to your bashrc if not present.

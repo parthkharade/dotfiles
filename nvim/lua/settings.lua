@@ -18,3 +18,5 @@ vim.g.clipboard = {
         ['*'] = 'tmux save-buffer -',
     },
 }
+
+vim.cmd('set mouse=')
