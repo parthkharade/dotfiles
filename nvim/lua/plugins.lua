@@ -35,7 +35,12 @@ return require('packer').startup(function(use)
   --   config = function()
   --     require'qf'.setup{}
   --   end
-  -- } 
+  -- }
+  -- Packer
+  use {
+    "eoh-bse/minintro.nvim",
+    config = function() require("minintro").setup() end
+  }
   use 'tpope/vim-fugitive'
   -- use 'github/copilot.vim' -- Enable this with caution. Don't when you are learning something new!
   -- use 'hrsh7th/nvim-cmp' -- Enable this if lsp ever works
