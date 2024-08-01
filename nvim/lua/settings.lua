@@ -1,6 +1,6 @@
 -- INTIALISATION
-vim.cmd('colorscheme gruvbox')
-vim.cmd('filetype plugin indent on')
+vim.cmd('colorscheme darkearth')
+-- vim.cmd('filetype plugin indent on')
 vim.o.number = true
 vim.o.cindent = true
 vim.opt.tabstop = 2
