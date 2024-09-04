@@ -33,13 +33,14 @@ return require('packer').startup(function(use)
   use 'Vimjas/vim-python-pep8-indent'
   use {'neoclide/coc.nvim', branch = 'release'} -- Menu Based Completion for Nvim. Kinda Works.
   use 'neovim/nvim-lspconfig' -- Does not work really well for Bazel. Try for CMake or make based projects later.
-  -- use {
-  --   'ten3roberts/qf.nvim',
-  --   config = function()
-  --     require'qf'.setup{}
-  --   end
-  -- }
-  -- Packer
+  use({
+    'MeanderingProgrammer/render-markdown.nvim',
+    after = { 'nvim-treesitter' },
+    requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  })
   use {
     "eoh-bse/minintro.nvim",
     config = function() require("minintro").setup() end

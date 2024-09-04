@@ -1,4 +1,5 @@
 -- INTIALISATION
+vim.cmd('set termguicolors')
 vim.cmd('colorscheme darkearth')
 -- vim.cmd('filetype plugin indent on')
 vim.o.number = true
