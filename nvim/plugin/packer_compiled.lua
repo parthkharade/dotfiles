@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/parth/.local/share/nvim/site/pack/packer/start/darkearth-nvim",
     url = "https://github.com/ptdewey/darkearth-nvim"
   },
+  doubletrouble = {
+    loaded = true,
+    path = "/home/parth/.local/share/nvim/site/pack/packer/start/doubletrouble",
+    url = "https://github.com/muchzill4/doubletrouble"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/parth/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
@@ -115,6 +120,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/parth/.local/share/nvim/site/pack/packer/start/minintro.nvim",
     url = "https://github.com/eoh-bse/minintro.nvim"
+  },
+  ["nabla.nvim"] = {
+    loaded = true,
+    path = "/home/parth/.local/share/nvim/site/pack/packer/start/nabla.nvim",
+    url = "https://github.com/jbyuki/nabla.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/parth/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/kunzaatko/nord.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -159,25 +174,25 @@ _G.packer_plugins = {
     path = "/home/parth/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
     url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   },
+  ["skel-nvim"] = {
+    loaded = true,
+    path = "/home/parth/.local/share/nvim/site/pack/packer/start/skel-nvim",
+    url = "https://github.com/motosir/skel-nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/parth/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/parth/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/parth/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-python-pep8-indent"] = {
+  vimtex = {
     loaded = true,
-    path = "/home/parth/.local/share/nvim/site/pack/packer/start/vim-python-pep8-indent",
-    url = "https://github.com/Vimjas/vim-python-pep8-indent"
+    path = "/home/parth/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

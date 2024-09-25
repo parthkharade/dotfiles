@@ -1,0 +1,7 @@
+-- Author: Parth Kharade 
+-- Date: @DATE@
+-- Description: VHDL Module
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+

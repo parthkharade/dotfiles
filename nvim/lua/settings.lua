@@ -1,7 +1,6 @@
 -- INTIALISATION
 vim.cmd('set termguicolors')
-vim.cmd('colorscheme darkearth')
--- vim.cmd('filetype plugin indent on')
+vim.cmd('colorscheme doubletrouble')
 vim.o.number = true
 vim.o.cindent = true
 vim.opt.tabstop = 2

@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -148,7 +148,10 @@ fi
 
 
 # Add nvim executable to the path
-export PATH=$PATH:"$HOME"/.local/bin:/opt/nvim-linux64/bin	
+export PATH=$PATH:"$HOME"/.local/bin
+export PATH=$PATH:/opt/nvim-linux64/bin
+export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+export PATH=$PATH:"$HOME"/protobuf/bin
 
 eval "$(zoxide init bash)"
 
@@ -161,3 +164,4 @@ if [ hostname == "c3d" ]; then
   # Generated for envman. Do not edit.
   [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 fi
+export LS_COLORS=$LS_COLORS:'ow=1;34:';

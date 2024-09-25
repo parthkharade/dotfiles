@@ -17,7 +17,7 @@ echo "Installing NodeJS ....." # Need this for CoC. Remove after LSP and nvim-cm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 # download and install Node.js (you may need to restart the terminal)
 nvm install 20
-
+npm install tree-sitter-cli # Need this for treesitter latex parser
 
 echo "Installing RipGrep ....."
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
