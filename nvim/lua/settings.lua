@@ -1,6 +1,7 @@
 -- INTIALISATION
 vim.cmd('set termguicolors')
 vim.cmd('colorscheme doubletrouble')
+-- vim.cmd('CocStop')
 vim.o.number = true
 vim.o.cindent = true
 vim.opt.tabstop = 2

@@ -1,0 +1,11 @@
+{
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": [".git", "compile_commands.json", "compile_flags.txt"],
+      "filetypes": ["c", "cpp"],
+      "trace.server": "verbose",
+      "args": ["--background-index", "--clang-tidy"],
+    }
+  }
+}

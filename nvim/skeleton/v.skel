@@ -1,0 +1,10 @@
+// Author: Parth Kharade 
+// Date: @DATE@
+// Description: Verilog Module
+
+module @FILEBNAME@(
+    // PORT DECLARATIONS
+);
+
+endmodule
+

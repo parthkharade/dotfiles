@@ -1,0 +1,15 @@
+/*
+Author : Parth Kharade
+Date : @DATE@
+Description :
+*/
+
+#include "stdio.h"
+#include "stdint.h"
+#include "stdbool.h"
+
+int main(){
+  printf("Hello World\r\n");
+  return 0;
+}
+

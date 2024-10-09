@@ -16,41 +16,48 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
+
+  --------------------------------------------------------------------------------------------------------------
+
   use 'rktjmp/lush.nvim' -- This is for themes.
-  use 'okaihe/okai' -- Okai Theme
-  use 'ellisonleao/gruvbox.nvim' -- Gruvbox theme
-  use 'xero/miasma.nvim' -- Miasma Theme
-  use 'ptdewey/darkearth-nvim' -- Darkearth Theme
   use 'muchzill4/doubletrouble' -- DoubleTrouble Theme
-  use 'kunzaatko/nord.nvim' -- Nord Theme
   use 'nvim-tree/nvim-web-devicons' -- For fancy file icons
   use 'nvim-lualine/lualine.nvim' -- Status bar in nvim 
-  use 'nvim-tree/nvim-tree.lua' -- File browse --> Don't need this, mehh remove
-  use 'nvim-treesitter/nvim-treesitter' -- Syntax highlighting, Kinda works
-  use 'motosir/skel-nvim'
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6', -- Best plugin ever, Live Grep is amazing.
+
+  use 'motosir/skel-nvim' -- File Templates
+  use {'nvim-telescope/telescope.nvim', tag = '0.1.6', -- For browsing files and live grep.
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  --------------------------------------------------------------------------------------------------------------
+
+  use 'nvim-treesitter/nvim-treesitter' -- Syntax highlighting, Kinda works
   use {'neoclide/coc.nvim', branch = 'release'} -- Menu Based Completion for Nvim. Kinda Works.
-  use 'neovim/nvim-lspconfig' -- Does not work really well for Bazel. Try for CMake or make based projects later
-  use({                       -- Render Markdown in nvim.
-    'MeanderingProgrammer/render-markdown.nvim',
-    after = { 'nvim-treesitter' },
-    requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+  use {"williamboman/mason.nvim",
+    config = function()
+      require('mason').setup({})
+      end
+  }
+  use {"williamboman/mason-lspconfig.nvim",
+    config = function()
+      require('mason-lspconfig').setup({})
+      end
+  }
+  use {
+    "neovim/nvim-lspconfig"
+  }
+  --------------------------------------------------------------------------------------------------------------
+
+  use({'MeanderingProgrammer/render-markdown.nvim',-- Render Markdown in nvim.
     config = function()
       require('render-markdown').setup({})
     end,
   })
-  use {
-    "eoh-bse/minintro.nvim", -- Fancy but minimal intro screen
+  use {"eoh-bse/minintro.nvim", -- Intro screen
     config = function() require("minintro").setup() end
   }
   use 'lervag/vimtex' -- For Latex Compilation and Stuff. I am mostly using overleaf for now though.
-  use 'tpope/vim-fugitive' -- Git Integtation. Pretty Good
-  use 'jbyuki/nabla.nvim' -- ASCII Math generator based on LaTeX equations.
   -- use 'github/copilot.vim' -- Enable this with caution. Don't when you are learning something new!
-  -- use 'hrsh7th/nvim-cmp' -- Enable this if lsp ever works
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
